@@ -24,7 +24,7 @@ final class AppleGalleryViewModel: ObservableObject {
     
     // MARK: - Private Methods
     private func fetchGalleryData() async {
-        let urlString = "https://pixabay.com/api/?key=42579446-bbc2e8726461b1faa8a164b23&q=apple&image_type=photo&per_page=40"
+        let urlString = "https://pixabay.com/api/?key=\(Constants.apiKey)&q=apple&image_type=photo&per_page=40"
         do {
             let appleGalleryResponse: AppleGalleryResponse = try await networkManager.fetchData(fromURL: urlString)
             await MainActor.run {

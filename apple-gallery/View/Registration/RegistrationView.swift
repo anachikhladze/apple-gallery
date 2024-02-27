@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RegistrationView: View {
     
-    @StateObject var viewModel = RegistrationViewModel()
+    @StateObject var viewModel: RegistrationViewModel
     @Environment(\.dismiss) var dismiss
     
     // MARK: - Body
@@ -134,6 +134,5 @@ struct RegistrationView: View {
 
 // MARK: - Preview
 #Preview {
-    RegistrationView()
+    RegistrationView(viewModel: RegistrationViewModel())
 }
-

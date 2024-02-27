@@ -7,13 +7,13 @@
 
 import Foundation
 
-// MARK: - Welcome
+// MARK: - AppleGalleryResponse
 struct AppleGalleryResponse: Decodable {
     let total, totalHits: Int
     let hits: [AppleItem]
 }
 
-// MARK: - Hit
+// MARK: - AppleItem
 struct AppleItem: Decodable, Identifiable, Hashable {
     let id: Int
     let pageURL: String

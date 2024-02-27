@@ -11,7 +11,7 @@ struct LoginView: View {
     
     // MARK: - Properties
     @Environment(\.colorScheme) var colorScheme
-    @StateObject var viewModel = LoginViewModel()
+    @StateObject var viewModel: LoginViewModel
     
     // MARK: - Body
     var body: some View {
@@ -84,7 +84,7 @@ struct LoginView: View {
     }
     
     private var registrationLink: some View {
-        NavigationLink(destination: RegistrationView()) {
+        NavigationLink(destination: RegistrationView(viewModel: RegistrationViewModel())) {
             HStack(spacing: 2) {
                 Text("Don't have an account? ")
                 Text("Sign Up")
@@ -98,5 +98,5 @@ struct LoginView: View {
 
 // MARK: - Preview
 #Preview {
-    LoginView()
+    LoginView(viewModel: LoginViewModel())
 }

@@ -12,7 +12,7 @@
 		A18FF2952B8DCC64001A38D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A18FF2942B8DCC64001A38D4 /* Preview Assets.xcassets */; };
 		A18FF29C2B8DCDAC001A38D4 /* AppleGalleryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF29B2B8DCDAC001A38D4 /* AppleGalleryCardView.swift */; };
 		A18FF29E2B8DCEAB001A38D4 /* AppleGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF29D2B8DCEAB001A38D4 /* AppleGalleryView.swift */; };
-		A18FF2A02B8DCF74001A38D4 /* AppleGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF29F2B8DCF74001A38D4 /* AppleGallery.swift */; };
+		A18FF2A02B8DCF74001A38D4 /* AppleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF29F2B8DCF74001A38D4 /* AppleItem.swift */; };
 		A18FF2A22B8DD0A4001A38D4 /* AppleGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2A12B8DD0A4001A38D4 /* AppleGalleryViewModel.swift */; };
 		A18FF2A72B8DD2C7001A38D4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A18FF2A62B8DD2C7001A38D4 /* Kingfisher */; };
 		A18FF2AE2B8DD4D0001A38D4 /* AppleDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2AD2B8DD4D0001A38D4 /* AppleDetailsView.swift */; };
@@ -24,6 +24,8 @@
 		A18FF2BF2B8DEA1F001A38D4 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2BE2B8DEA1F001A38D4 /* RegistrationViewModel.swift */; };
 		A18FF2C12B8DEB3E001A38D4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2C02B8DEB3E001A38D4 /* LoginViewModel.swift */; };
 		A18FF3102B8E1C16001A38D4 /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = A18FF30F2B8E1C16001A38D4 /* NetworkManager */; };
+		A18FF3142B8E3A01001A38D4 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF3132B8E3A01001A38D4 /* MockAPI.swift */; };
+		A18FF3162B8E3A4C001A38D4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF3152B8E3A4C001A38D4 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +35,7 @@
 		A18FF2942B8DCC64001A38D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A18FF29B2B8DCDAC001A38D4 /* AppleGalleryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGalleryCardView.swift; sourceTree = "<group>"; };
 		A18FF29D2B8DCEAB001A38D4 /* AppleGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGalleryView.swift; sourceTree = "<group>"; };
-		A18FF29F2B8DCF74001A38D4 /* AppleGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGallery.swift; sourceTree = "<group>"; };
+		A18FF29F2B8DCF74001A38D4 /* AppleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleItem.swift; sourceTree = "<group>"; };
 		A18FF2A12B8DD0A4001A38D4 /* AppleGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGalleryViewModel.swift; sourceTree = "<group>"; };
 		A18FF2AD2B8DD4D0001A38D4 /* AppleDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleDetailsView.swift; sourceTree = "<group>"; };
 		A18FF2B02B8DE465001A38D4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -43,6 +45,8 @@
 		A18FF2BC2B8DE765001A38D4 /* SignInCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCustomButton.swift; sourceTree = "<group>"; };
 		A18FF2BE2B8DEA1F001A38D4 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		A18FF2C02B8DEB3E001A38D4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A18FF3132B8E3A01001A38D4 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
+		A18FF3152B8E3A4C001A38D4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		A18FF28C2B8DCC62001A38D4 /* apple-gallery */ = {
 			isa = PBXGroup;
 			children = (
+				A18FF3112B8E38DF001A38D4 /* Service */,
 				A18FF2A82B8DD36D001A38D4 /* App */,
 				A18FF2A92B8DD38A001A38D4 /* Model */,
 				A18FF2AA2B8DD3B1001A38D4 /* View */,
@@ -106,7 +111,8 @@
 		A18FF2A92B8DD38A001A38D4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A18FF29F2B8DCF74001A38D4 /* AppleGallery.swift */,
+				A18FF29F2B8DCF74001A38D4 /* AppleItem.swift */,
+				A18FF3152B8E3A4C001A38D4 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -166,6 +172,14 @@
 				A18FF2BE2B8DEA1F001A38D4 /* RegistrationViewModel.swift */,
 			);
 			path = Registration;
+			sourceTree = "<group>";
+		};
+		A18FF3112B8E38DF001A38D4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A18FF3132B8E3A01001A38D4 /* MockAPI.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,12 +264,14 @@
 				A18FF2B12B8DE465001A38D4 /* DetailView.swift in Sources */,
 				A18FF29C2B8DCDAC001A38D4 /* AppleGalleryCardView.swift in Sources */,
 				A18FF2B42B8DE697001A38D4 /* LoginView.swift in Sources */,
-				A18FF2A02B8DCF74001A38D4 /* AppleGallery.swift in Sources */,
+				A18FF2A02B8DCF74001A38D4 /* AppleItem.swift in Sources */,
 				A18FF2C12B8DEB3E001A38D4 /* LoginViewModel.swift in Sources */,
 				A18FF2BD2B8DE765001A38D4 /* SignInCustomButton.swift in Sources */,
 				A18FF2AE2B8DD4D0001A38D4 /* AppleDetailsView.swift in Sources */,
+				A18FF3162B8E3A4C001A38D4 /* User.swift in Sources */,
 				A18FF29E2B8DCEAB001A38D4 /* AppleGalleryView.swift in Sources */,
 				A18FF2BF2B8DEA1F001A38D4 /* RegistrationViewModel.swift in Sources */,
+				A18FF3142B8E3A01001A38D4 /* MockAPI.swift in Sources */,
 				A18FF2BB2B8DE728001A38D4 /* InputView.swift in Sources */,
 				A18FF28E2B8DCC62001A38D4 /* apple_galleryApp.swift in Sources */,
 				A18FF2B72B8DE6D9001A38D4 /* RegistrationView.swift in Sources */,
