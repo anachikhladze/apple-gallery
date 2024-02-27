@@ -8,11 +8,96 @@
 import SwiftUI
 
 struct LoginView: View {
+    
+    // MARK: - Properties
+    @Environment(\.colorScheme) var colorScheme
+    @StateObject var viewModel = LoginViewModel()
+    
+    // MARK: - Body
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            loginImage
+            mainVStack
+            signInButton
+            Spacer()
+            registrationLink
+        }
+    }
+    
+    private var loginImage: some View {
+        Image("login")
+            .resizable()
+            .scaledToFill()
+            .frame(maxWidth: 90, maxHeight: 100)
+            .padding(.top, 32)
+    }
+    
+    private var mainVStack: some View {
+        VStack(spacing: 24) {
+            Text("Login")
+                .font(.custom("Avenir Next", size: 30))
+                .fontWeight(.semibold)
+            
+            InputView(text: $viewModel.email,
+                      title: "Email Address",
+                      placeholder: "name@gmail.com", errorMessage: viewModel.emailPrompt)
+            .textInputAutocapitalization(.never)
+            .onChange(of: viewModel.email) { _, _ in
+                viewModel.didStartTypingEmail = true
+            }
+            
+            InputView(text: $viewModel.password,
+                      title: "Password",
+                      placeholder: "Enter your password",
+                      isSecureField: true, errorMessage: viewModel.passwordPrompt)
+            .onChange(of: viewModel.password) { _, _ in
+                viewModel.didStartTypingPassword = true
+            }
+            
+            forgotPasswordLink
+        }
+        .padding(.horizontal)
+        .padding(.top, 12)
+    }
+    
+    private var forgotPasswordLink: some View {
+        HStack(alignment: .bottom) {
+            Spacer()
+            Text("Forgot Password?")
+                .fontWeight(.bold)
+                .font(.footnote)
+                .foregroundStyle(.blue)
+        }
+    }
+    
+    private var signInButton: some View {
+        NavigationView {
+            SignInCustomButton(label: "SIGN IN") {
+            // action
+            }
+            .disabled(viewModel.isLoginFormValid)
+            .opacity(viewModel.isLoginFormValid ? 1.0 : 0.5)
+            .alert(isPresented: $viewModel.showingAlert) {
+                Alert(title: Text("Login Error"), message: Text("The email address or password you entered is incorrect. Please try again."), dismissButton: .default(Text("OK")))
+            }
+        }
+    }
+    
+    private var registrationLink: some View {
+        NavigationLink(destination: RegistrationView()) {
+            HStack(spacing: 2) {
+                Text("Don't have an account? ")
+                Text("Sign Up")
+                    .fontWeight(.bold)
+            }
+            .font(.system(size: 14))
+        }
     }
 }
 
+
+// MARK: - Preview
 #Preview {
     LoginView()
 }
+
