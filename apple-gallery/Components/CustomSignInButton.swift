@@ -1,5 +1,5 @@
 //
-//  SignInCustomButton.swift
+//  CustomSignInButton.swift
 //  apple-gallery
 //
 //  Created by Anna Sumire on 27.02.24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SignInCustomButton: View {
+struct CustomSignInButton: View {
     
     // MARK: - Properties
     var label: String
@@ -16,7 +16,7 @@ struct SignInCustomButton: View {
     // MARK: - Body
     var body: some View {
         Button {
-           action()
+            action()
         } label: {
             HStack {
                 Text(label)

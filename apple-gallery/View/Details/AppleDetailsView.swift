@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AppleDetailsView: View {
+    
     // MARK: - Properties
     var appleItem: AppleItem
     
@@ -16,6 +17,7 @@ struct AppleDetailsView: View {
         appleDetailsScrollView
     }
     
+    // MARK: - View Components
     private var appleDetailsScrollView: some View {
         ScrollView {
             mainVStack
@@ -33,8 +35,7 @@ struct AppleDetailsView: View {
     
     private var appleAsyncImage: some View {
         AsyncImage(url: URL(string:
-                                appleItem.largeImageURL)) { image in
-            image
+                                appleItem.largeImageURL)) { image in image
                 .resizable()
                 .scaledToFit()
             
@@ -47,10 +48,8 @@ struct AppleDetailsView: View {
     }
     
     private var imageDetailsText: some View {
-        HStack {
-            Text("Image Details:")
-                .font(.system(size: 24, weight: .black, design: .rounded))
-        }
+        Text("Image Details:")
+            .font(.system(size: 24, weight: .black, design: .rounded))
     }
     
     private var imageDetailsVStack: some View {
@@ -74,7 +73,6 @@ struct AppleDetailsView: View {
         }
         .cornerRadius(10)
     }
-    
     
     private var imageDetailsCardView: some View {
         ZStack(alignment: .leading) {

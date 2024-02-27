@@ -20,7 +20,7 @@
 		A18FF2B42B8DE697001A38D4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2B32B8DE697001A38D4 /* LoginView.swift */; };
 		A18FF2B72B8DE6D9001A38D4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2B62B8DE6D9001A38D4 /* RegistrationView.swift */; };
 		A18FF2BB2B8DE728001A38D4 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2BA2B8DE728001A38D4 /* InputView.swift */; };
-		A18FF2BD2B8DE765001A38D4 /* SignInCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2BC2B8DE765001A38D4 /* SignInCustomButton.swift */; };
+		A18FF2BD2B8DE765001A38D4 /* CustomSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2BC2B8DE765001A38D4 /* CustomSignInButton.swift */; };
 		A18FF2BF2B8DEA1F001A38D4 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2BE2B8DEA1F001A38D4 /* RegistrationViewModel.swift */; };
 		A18FF2C12B8DEB3E001A38D4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2C02B8DEB3E001A38D4 /* LoginViewModel.swift */; };
 		A18FF3102B8E1C16001A38D4 /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = A18FF30F2B8E1C16001A38D4 /* NetworkManager */; };
@@ -44,7 +44,7 @@
 		A18FF2B32B8DE697001A38D4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A18FF2B62B8DE6D9001A38D4 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		A18FF2BA2B8DE728001A38D4 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
-		A18FF2BC2B8DE765001A38D4 /* SignInCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCustomButton.swift; sourceTree = "<group>"; };
+		A18FF2BC2B8DE765001A38D4 /* CustomSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignInButton.swift; sourceTree = "<group>"; };
 		A18FF2BE2B8DEA1F001A38D4 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		A18FF2C02B8DEB3E001A38D4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A18FF3132B8E3A01001A38D4 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 			children = (
 				A18FF2B02B8DE465001A38D4 /* DetailView.swift */,
 				A18FF2BA2B8DE728001A38D4 /* InputView.swift */,
-				A18FF2BC2B8DE765001A38D4 /* SignInCustomButton.swift */,
+				A18FF2BC2B8DE765001A38D4 /* CustomSignInButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -289,7 +289,7 @@
 				A18FF2A02B8DCF74001A38D4 /* AppleItem.swift in Sources */,
 				A18FF2C12B8DEB3E001A38D4 /* LoginViewModel.swift in Sources */,
 				A18FF3192B8E3CED001A38D4 /* ConditionalNavigationModifier.swift in Sources */,
-				A18FF2BD2B8DE765001A38D4 /* SignInCustomButton.swift in Sources */,
+				A18FF2BD2B8DE765001A38D4 /* CustomSignInButton.swift in Sources */,
 				A18FF2AE2B8DD4D0001A38D4 /* AppleDetailsView.swift in Sources */,
 				A18FF3162B8E3A4C001A38D4 /* User.swift in Sources */,
 				A18FF29E2B8DCEAB001A38D4 /* AppleGalleryView.swift in Sources */,

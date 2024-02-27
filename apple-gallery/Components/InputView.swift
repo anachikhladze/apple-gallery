@@ -8,18 +8,21 @@
 import SwiftUI
 
 struct InputView: View {
+    
+    // MARK: - Properties
     @Binding var text: String
     let title: String
     let placeholder: String
     var isSecureField = false
     var errorMessage: String
-
+    
+    // MARK: - Body
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
             Text(title)
                 .font(.caption)
                 .foregroundColor(.gray)
-
+            
             if isSecureField {
                 SecureField(placeholder, text: $text)
                     .padding()
@@ -39,7 +42,6 @@ struct InputView: View {
                             .stroke(errorMessage.isEmpty ? Color.gray : Color.red, lineWidth: 1)
                     )
             }
-
             if !errorMessage.isEmpty {
                 Text(errorMessage)
                     .font(.caption)

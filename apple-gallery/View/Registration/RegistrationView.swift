@@ -113,7 +113,7 @@ struct RegistrationView: View {
     }
     
     private var signUpButton: some View {
-        SignInCustomButton(label: "SIGN UP") {
+        CustomSignInButton(label: "SIGN UP") {
             Task {
                 do {
                     try await MockAPI.shared.register(email: viewModel.email, password: viewModel.password, age: viewModel.age)

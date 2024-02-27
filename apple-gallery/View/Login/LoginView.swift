@@ -74,7 +74,7 @@ struct LoginView: View {
     
     private var signInButton: some View {
         NavigationView {
-            SignInCustomButton(label: "SIGN IN") {
+            CustomSignInButton(label: "SIGN IN") {
                 Task {
                     do {
                         try await MockAPI.shared.login(email: viewModel.email, password: viewModel.password)

@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct DetailView: View {
+    
+    // MARK: - Properties
     var symbolName: String
     var detailText: String
-
+    
+    // MARK: - Body
     var body: some View {
         HStack {
             Image(systemName: symbolName)
