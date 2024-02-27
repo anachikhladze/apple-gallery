@@ -24,9 +24,9 @@ struct AppleGalleryCardView: View {
         }
         .frame(maxWidth: 140)
         .padding(EdgeInsets(top: 20, leading: 15, bottom: 15, trailing: 15))
-        .background(Color.white)
-        .cornerRadius(10)
-        .shadow(color: .gray, radius: 6, x: 0, y: 6)
+        .background(Color.cardBackground)
+        .cornerRadius(6)
+        .shadow(color: .gray, radius: 3, x: 0, y: 3)
     }
     
     private var appleImage: some View {
@@ -51,4 +51,3 @@ struct AppleGalleryCardView: View {
         }
     }
 }
-

@@ -39,7 +39,7 @@ struct AppleGalleryView: View {
             .navigationTitle("Apple Gallery")
             .navigationBarTitleDisplayMode(.inline)
             .navigationDestination(for: AppleItem.self) { item in
-                AppleGalleryCardView(appleItem: item)
+                AppleDetailsView(appleItem: item)
             }
         }
     }
