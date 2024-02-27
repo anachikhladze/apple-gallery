@@ -22,6 +22,7 @@
 		A18FF2B72B8DE6D9001A38D4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2B62B8DE6D9001A38D4 /* RegistrationView.swift */; };
 		A18FF2BB2B8DE728001A38D4 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2BA2B8DE728001A38D4 /* InputView.swift */; };
 		A18FF2BD2B8DE765001A38D4 /* SignInCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2BC2B8DE765001A38D4 /* SignInCustomButton.swift */; };
+		A18FF2BF2B8DEA1F001A38D4 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2BE2B8DEA1F001A38D4 /* RegistrationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		A18FF2B62B8DE6D9001A38D4 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		A18FF2BA2B8DE728001A38D4 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		A18FF2BC2B8DE765001A38D4 /* SignInCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCustomButton.swift; sourceTree = "<group>"; };
+		A18FF2BE2B8DEA1F001A38D4 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				A18FF2B62B8DE6D9001A38D4 /* RegistrationView.swift */,
+				A18FF2BE2B8DEA1F001A38D4 /* RegistrationViewModel.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				A18FF2BD2B8DE765001A38D4 /* SignInCustomButton.swift in Sources */,
 				A18FF2AE2B8DD4D0001A38D4 /* AppleDetailsView.swift in Sources */,
 				A18FF29E2B8DCEAB001A38D4 /* AppleGalleryView.swift in Sources */,
+				A18FF2BF2B8DEA1F001A38D4 /* RegistrationViewModel.swift in Sources */,
 				A18FF2BB2B8DE728001A38D4 /* InputView.swift in Sources */,
 				A18FF28E2B8DCC62001A38D4 /* apple_galleryApp.swift in Sources */,
 				A18FF2B72B8DE6D9001A38D4 /* RegistrationView.swift in Sources */,
