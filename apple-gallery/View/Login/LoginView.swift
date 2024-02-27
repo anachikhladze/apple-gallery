@@ -11,7 +11,6 @@ import NetworkManager
 struct LoginView: View {
     
     // MARK: - Properties
-    @Environment(\.colorScheme) var colorScheme
     @StateObject var viewModel: LoginViewModel
     
     // MARK: - Body
