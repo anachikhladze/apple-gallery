@@ -17,6 +17,7 @@ struct AppleGalleryCardView: View {
         mainVStack
     }
     
+    // MARK: - View Components
     private var mainVStack: some View {
         VStack(alignment: .center) {
             appleImage
@@ -35,7 +36,6 @@ struct AppleGalleryCardView: View {
             .scaledToFill()
             .frame(maxWidth: 120, maxHeight: 150)
     }
-    
     
     private var infoVStack: some View {
         VStack {

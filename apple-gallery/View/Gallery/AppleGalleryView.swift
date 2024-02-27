@@ -9,6 +9,7 @@ import SwiftUI
 import NetworkManager
 
 struct AppleGalleryView: View {
+    
     // MARK: - Properties
     @StateObject var viewModel: AppleGalleryViewModel
     
@@ -46,6 +47,7 @@ struct AppleGalleryView: View {
     }
 }
 
+// MARK: - #Preview
 #Preview {
     AppleGalleryView(viewModel: AppleGalleryViewModel(networkManager: NetworkManager()))
 }
