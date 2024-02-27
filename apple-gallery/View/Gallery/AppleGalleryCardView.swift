@@ -45,7 +45,7 @@ struct AppleGalleryCardView: View {
                 .padding(.top, 10)
                 .lineLimit(1)
             
-            Text("Likes: \(String(18)) ⭐️")
+            Text("Likes: \(String(appleItem.likes)) ⭐️")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
         }
