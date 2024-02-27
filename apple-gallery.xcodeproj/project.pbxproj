@@ -12,6 +12,8 @@
 		A18FF2922B8DCC64001A38D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A18FF2912B8DCC64001A38D4 /* Assets.xcassets */; };
 		A18FF2952B8DCC64001A38D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A18FF2942B8DCC64001A38D4 /* Preview Assets.xcassets */; };
 		A18FF29C2B8DCDAC001A38D4 /* AppleGalleryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF29B2B8DCDAC001A38D4 /* AppleGalleryCardView.swift */; };
+		A18FF29E2B8DCEAB001A38D4 /* AppleGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF29D2B8DCEAB001A38D4 /* AppleGalleryView.swift */; };
+		A18FF2A02B8DCF74001A38D4 /* AppleGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF29F2B8DCF74001A38D4 /* AppleGallery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		A18FF2912B8DCC64001A38D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A18FF2942B8DCC64001A38D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A18FF29B2B8DCDAC001A38D4 /* AppleGalleryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGalleryCardView.swift; sourceTree = "<group>"; };
+		A18FF29D2B8DCEAB001A38D4 /* AppleGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGalleryView.swift; sourceTree = "<group>"; };
+		A18FF29F2B8DCF74001A38D4 /* AppleGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGallery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 				A18FF28D2B8DCC62001A38D4 /* apple_galleryApp.swift */,
 				A18FF28F2B8DCC62001A38D4 /* ContentView.swift */,
 				A18FF29B2B8DCDAC001A38D4 /* AppleGalleryCardView.swift */,
+				A18FF29F2B8DCF74001A38D4 /* AppleGallery.swift */,
+				A18FF29D2B8DCEAB001A38D4 /* AppleGalleryView.swift */,
 				A18FF2912B8DCC64001A38D4 /* Assets.xcassets */,
 				A18FF2932B8DCC64001A38D4 /* Preview Content */,
 			);
@@ -141,7 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A18FF29C2B8DCDAC001A38D4 /* AppleGalleryCardView.swift in Sources */,
+				A18FF2A02B8DCF74001A38D4 /* AppleGallery.swift in Sources */,
 				A18FF2902B8DCC62001A38D4 /* ContentView.swift in Sources */,
+				A18FF29E2B8DCEAB001A38D4 /* AppleGalleryView.swift in Sources */,
 				A18FF28E2B8DCC62001A38D4 /* apple_galleryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
