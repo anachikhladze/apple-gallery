@@ -25,6 +25,7 @@ struct LoginView: View {
         .navigate(when: $viewModel.isLoggedIn, to: AppleGalleryView(viewModel: AppleGalleryViewModel(networkManager: NetworkManager())))
     }
     
+    // MARK: - View Components
     private var loginImage: some View {
         Image("login")
             .resizable()
