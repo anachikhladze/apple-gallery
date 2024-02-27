@@ -9,32 +9,18 @@ import Foundation
 
 final class LoginViewModel: ObservableObject {
     
+    // MARK: - Properties
     @Published var isLoggedIn = false
-    
     @Published var email = ""
     @Published var password = ""
     @Published var showingAlert = false
     @Published var alertMessage = ""
     
-    @Published var didStartTypingEmail = false
-    @Published var didStartTypingPassword = false
+    var didStartTypingEmail = false
+    var didStartTypingPassword = false
     
-    func isPasswordValid() -> Bool {
-        !password.isEmpty && password.count >= 6 && password.count <= 12
-    }
     
-    func isEmailValid() -> Bool {
-        !email.isEmpty && email.contains("@")
-    }
-    
-    var isLoginFormValid: Bool {
-        if !isEmailValid() ||
-             !isPasswordValid() {
-            return false
-        }
-        return true
-    }
-    
+    // MARK: - Computed Properties
     var emailPrompt: String {
         if isEmailValid() || !didStartTypingEmail {
             return ""
@@ -49,5 +35,22 @@ final class LoginViewModel: ObservableObject {
         } else  {
             return "Password must contain 6-12 characters"
         }
+    }
+    
+    var isLoginFormValid: Bool {
+        if !isEmailValid() ||
+            !isPasswordValid() {
+            return false
+        }
+        return true
+    }
+    
+    // MARK: - LoginViewModel Methods
+    func isEmailValid() -> Bool {
+        !email.isEmpty && email.contains("@")
+    }
+    
+    func isPasswordValid() -> Bool {
+        !password.isEmpty && password.count >= 6 && password.count <= 12
     }
 }
