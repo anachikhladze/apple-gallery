@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import NetworkManager
 
 struct AppleGalleryView: View {
     // MARK: - Properties
-    @StateObject var viewModel = AppleGalleryViewModel()
+    @StateObject var viewModel: AppleGalleryViewModel
     
     private let columns = [
         GridItem(.flexible()),
@@ -45,9 +46,6 @@ struct AppleGalleryView: View {
     }
 }
 
-
-
 #Preview {
-    AppleGalleryView()
+    AppleGalleryView(viewModel: AppleGalleryViewModel(networkManager: NetworkManager()))
 }
-

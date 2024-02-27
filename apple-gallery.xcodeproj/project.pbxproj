@@ -14,7 +14,6 @@
 		A18FF29E2B8DCEAB001A38D4 /* AppleGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF29D2B8DCEAB001A38D4 /* AppleGalleryView.swift */; };
 		A18FF2A02B8DCF74001A38D4 /* AppleGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF29F2B8DCF74001A38D4 /* AppleGallery.swift */; };
 		A18FF2A22B8DD0A4001A38D4 /* AppleGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2A12B8DD0A4001A38D4 /* AppleGalleryViewModel.swift */; };
-		A18FF2A42B8DD121001A38D4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2A32B8DD121001A38D4 /* NetworkManager.swift */; };
 		A18FF2A72B8DD2C7001A38D4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A18FF2A62B8DD2C7001A38D4 /* Kingfisher */; };
 		A18FF2AE2B8DD4D0001A38D4 /* AppleDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2AD2B8DD4D0001A38D4 /* AppleDetailsView.swift */; };
 		A18FF2B12B8DE465001A38D4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2B02B8DE465001A38D4 /* DetailView.swift */; };
@@ -24,6 +23,7 @@
 		A18FF2BD2B8DE765001A38D4 /* SignInCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2BC2B8DE765001A38D4 /* SignInCustomButton.swift */; };
 		A18FF2BF2B8DEA1F001A38D4 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2BE2B8DEA1F001A38D4 /* RegistrationViewModel.swift */; };
 		A18FF2C12B8DEB3E001A38D4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF2C02B8DEB3E001A38D4 /* LoginViewModel.swift */; };
+		A18FF3102B8E1C16001A38D4 /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = A18FF30F2B8E1C16001A38D4 /* NetworkManager */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,6 @@
 		A18FF29D2B8DCEAB001A38D4 /* AppleGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGalleryView.swift; sourceTree = "<group>"; };
 		A18FF29F2B8DCF74001A38D4 /* AppleGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGallery.swift; sourceTree = "<group>"; };
 		A18FF2A12B8DD0A4001A38D4 /* AppleGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGalleryViewModel.swift; sourceTree = "<group>"; };
-		A18FF2A32B8DD121001A38D4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A18FF2AD2B8DD4D0001A38D4 /* AppleDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleDetailsView.swift; sourceTree = "<group>"; };
 		A18FF2B02B8DE465001A38D4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		A18FF2B32B8DE697001A38D4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A18FF2A72B8DD2C7001A38D4 /* Kingfisher in Frameworks */,
+				A18FF3102B8E1C16001A38D4 /* NetworkManager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +81,6 @@
 				A18FF2A92B8DD38A001A38D4 /* Model */,
 				A18FF2AA2B8DD3B1001A38D4 /* View */,
 				A18FF2AF2B8DE43F001A38D4 /* Components */,
-				A18FF2A32B8DD121001A38D4 /* NetworkManager.swift */,
 				A18FF2912B8DCC64001A38D4 /* Assets.xcassets */,
 				A18FF2932B8DCC64001A38D4 /* Preview Content */,
 			);
@@ -187,6 +186,7 @@
 			name = "apple-gallery";
 			packageProductDependencies = (
 				A18FF2A62B8DD2C7001A38D4 /* Kingfisher */,
+				A18FF30F2B8E1C16001A38D4 /* NetworkManager */,
 			);
 			productName = "apple-gallery";
 			productReference = A18FF28A2B8DCC62001A38D4 /* apple-gallery.app */;
@@ -218,6 +218,7 @@
 			mainGroup = A18FF2812B8DCC62001A38D4;
 			packageReferences = (
 				A18FF2A52B8DD2C7001A38D4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				A18FF30E2B8E1C16001A38D4 /* XCRemoteSwiftPackageReference "network-manager-package" */,
 			);
 			productRefGroup = A18FF28B2B8DCC62001A38D4 /* Products */;
 			projectDirPath = "";
@@ -250,7 +251,6 @@
 				A18FF29C2B8DCDAC001A38D4 /* AppleGalleryCardView.swift in Sources */,
 				A18FF2B42B8DE697001A38D4 /* LoginView.swift in Sources */,
 				A18FF2A02B8DCF74001A38D4 /* AppleGallery.swift in Sources */,
-				A18FF2A42B8DD121001A38D4 /* NetworkManager.swift in Sources */,
 				A18FF2C12B8DEB3E001A38D4 /* LoginViewModel.swift in Sources */,
 				A18FF2BD2B8DE765001A38D4 /* SignInCustomButton.swift in Sources */,
 				A18FF2AE2B8DD4D0001A38D4 /* AppleDetailsView.swift in Sources */,
@@ -472,6 +472,14 @@
 				minimumVersion = 7.11.0;
 			};
 		};
+		A18FF30E2B8E1C16001A38D4 /* XCRemoteSwiftPackageReference "network-manager-package" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/anachikhladze/network-manager-package";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -479,6 +487,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A18FF2A52B8DD2C7001A38D4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		A18FF30F2B8E1C16001A38D4 /* NetworkManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A18FF30E2B8E1C16001A38D4 /* XCRemoteSwiftPackageReference "network-manager-package" */;
+			productName = NetworkManager;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

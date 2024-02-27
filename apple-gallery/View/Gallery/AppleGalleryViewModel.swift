@@ -6,14 +6,17 @@
 //
 
 import SwiftUI
+import NetworkManager
 
 final class AppleGalleryViewModel: ObservableObject {
     
     // MARK: - Properties
+    let networkManager: APIServices
     @Published var results: [AppleItem] = []
     
-    // MARK: - Init
-    init() {
+    // MARK: - Initialization
+    init(networkManager: APIServices) {
+        self.networkManager = networkManager
         Task {
             await fetchGalleryData()
         }
@@ -23,7 +26,7 @@ final class AppleGalleryViewModel: ObservableObject {
     private func fetchGalleryData() async {
         let urlString = "https://pixabay.com/api/?key=42579446-bbc2e8726461b1faa8a164b23&q=apple&image_type=photo&per_page=40"
         do {
-            let appleGalleryResponse: AppleGalleryResponse = try await NetworkManager.shared.fetchData(fromURL: urlString)
+            let appleGalleryResponse: AppleGalleryResponse = try await networkManager.fetchData(fromURL: urlString)
             await MainActor.run {
                 results = appleGalleryResponse.hits
             }

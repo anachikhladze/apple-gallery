@@ -8,6 +8,15 @@
         "revision" : "5b92f029fab2cce44386d28588098b5be0824ef5",
         "version" : "7.11.0"
       }
+    },
+    {
+      "identity" : "network-manager-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/anachikhladze/network-manager-package",
+      "state" : {
+        "branch" : "main",
+        "revision" : "9e990bd019489916ad4ad5e442119df56c078c22"
+      }
     }
   ],
   "version" : 2
