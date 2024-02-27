@@ -112,7 +112,14 @@ struct RegistrationView: View {
     
     private var signUpButton: some View {
         SignInCustomButton(label: "SIGN UP") {
-           // action
+            Task {
+                do {
+                    try await MockAPI.shared.register(email: viewModel.email, password: viewModel.password, age: viewModel.age)
+                    viewModel.showAlert = true
+                } catch {
+                    // error
+                }
+            }
         }
         .disabled(!viewModel.isRegistrationFormValid)
         .opacity(viewModel.isRegistrationFormValid ? 1.0 : 0.5)

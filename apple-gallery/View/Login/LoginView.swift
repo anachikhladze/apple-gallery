@@ -73,9 +73,17 @@ struct LoginView: View {
     private var signInButton: some View {
         NavigationView {
             SignInCustomButton(label: "SIGN IN") {
-            // action
+                Task {
+                    do {
+                        try await MockAPI.shared.login(email: viewModel.email, password: viewModel.password)
+                        viewModel.isLoggedIn = true
+                        
+                    } catch {
+                        viewModel.showingAlert = true
+                    }
+                }
             }
-            .disabled(viewModel.isLoginFormValid)
+            .disabled(!viewModel.isLoginFormValid)
             .opacity(viewModel.isLoginFormValid ? 1.0 : 0.5)
             .alert(isPresented: $viewModel.showingAlert) {
                 Alert(title: Text("Login Error"), message: Text("The email address or password you entered is incorrect. Please try again."), dismissButton: .default(Text("OK")))

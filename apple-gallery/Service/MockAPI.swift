@@ -10,7 +10,7 @@ import Foundation
 final class MockAPI {
     
     private var registeredUsers = [
-        User(id: UUID(), email: "anachikhladze@gmail.com", age: "25", password: "qwerty")
+        User(id: UUID(), email: "anachikhladze99@gmail.com", age: "25", password: "qwerty")
     ]
     
     static let shared = MockAPI()
