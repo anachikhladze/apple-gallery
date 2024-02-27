@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct AppleGalleryCardView: View {
     
@@ -18,7 +19,7 @@ struct AppleGalleryCardView: View {
     
     private var mainVStack: some View {
         VStack(alignment: .center) {
-           
+            appleImage
             infoVStack
         }
         .frame(maxWidth: 140)
@@ -26,6 +27,13 @@ struct AppleGalleryCardView: View {
         .background(Color.white)
         .cornerRadius(10)
         .shadow(color: .gray, radius: 6, x: 0, y: 6)
+    }
+    
+    private var appleImage: some View {
+        KFImage(URL(string: appleItem.largeImageURL))
+            .resizable()
+            .scaledToFill()
+            .frame(maxWidth: 120, maxHeight: 150)
     }
     
     
