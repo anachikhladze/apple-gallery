@@ -31,4 +31,3 @@ struct CustomSignInButton: View {
         .padding(.top, 24)
     }
 }
-

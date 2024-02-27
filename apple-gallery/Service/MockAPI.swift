@@ -10,15 +10,13 @@ import Foundation
 final class MockAPI {
     
     private var registeredUsers = [
-        User(id: UUID(), email: "test@gmail.com", age: "25", password: "qwerty")
+        User(id: UUID(), email: "test@gmail.com", age: "24", password: "qwerty")
     ]
     
     static let shared = MockAPI()
-    
     private init() {}
     
     func login(email: String, password: String) async throws -> Void {
-        
         guard let user = registeredUsers.first(where: { $0.email == email }) else {
             throw UserError.userNotFound
         }
@@ -29,7 +27,6 @@ final class MockAPI {
     }
     
     func register(email: String, password: String, age: String) async throws -> Void {
-        
         if registeredUsers.contains(where: { $0.email == email }) {
             throw UserError.emailAlreadyInUse
         }
@@ -37,7 +34,6 @@ final class MockAPI {
         let user = User(id: UUID(), email: email, age: age, password: password)
         registeredUsers.append(user)
     }
-
 }
 
 enum UserError: Error {

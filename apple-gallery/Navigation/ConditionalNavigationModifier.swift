@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ConditionalNavigationModifier<Destination: View>: ViewModifier {
+    
     @Binding var condition: Bool
     let destination: Destination
 
