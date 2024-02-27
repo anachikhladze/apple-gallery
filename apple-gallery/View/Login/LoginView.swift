@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import NetworkManager
 
 struct LoginView: View {
     
@@ -22,6 +23,7 @@ struct LoginView: View {
             Spacer()
             registrationLink
         }
+        .navigate(when: $viewModel.isLoggedIn, to: AppleGalleryView(viewModel: AppleGalleryViewModel(networkManager: NetworkManager())))
     }
     
     private var loginImage: some View {
@@ -29,7 +31,7 @@ struct LoginView: View {
             .resizable()
             .scaledToFill()
             .frame(maxWidth: 90, maxHeight: 100)
-            .padding(.top, 32)
+            .padding(.top, 30)
     }
     
     private var mainVStack: some View {
@@ -66,7 +68,7 @@ struct LoginView: View {
             Text("Forgot Password?")
                 .fontWeight(.bold)
                 .font(.footnote)
-                .foregroundStyle(.blue)
+                .foregroundStyle(Color.accentColor)
         }
     }
     

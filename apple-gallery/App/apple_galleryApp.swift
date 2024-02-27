@@ -12,7 +12,7 @@ import NetworkManager
 struct apple_galleryApp: App {
     var body: some Scene {
         WindowGroup {
-            AppleGalleryView(viewModel: AppleGalleryViewModel(networkManager: NetworkManager()))
+            LoginView(viewModel: LoginViewModel())
         }
     }
 }

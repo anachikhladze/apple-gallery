@@ -34,7 +34,7 @@ struct AppleGalleryView: View {
                     NavigationLink(value: item, label: {
                         AppleGalleryCardView(appleItem: item)
                     })
-                        .padding(.bottom, 10)
+                    .padding(.bottom, 10)
                 }
             }
             .navigationTitle("Apple Gallery")

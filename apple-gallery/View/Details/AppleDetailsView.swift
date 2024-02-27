@@ -102,7 +102,7 @@ struct AppleDetailsView: View {
     
     private var cardViewBackground: some View {
         Rectangle()
-            .fill(LinearGradient(gradient: Gradient(colors: [Color.gray, Color.blue]), startPoint: .topTrailing, endPoint: .bottomTrailing))
+            .fill(LinearGradient(gradient: Gradient(colors: [Color.gray, Color.accentColor]), startPoint: .topTrailing, endPoint: .bottomTrailing))
             .opacity(0.5)
     }
 }
