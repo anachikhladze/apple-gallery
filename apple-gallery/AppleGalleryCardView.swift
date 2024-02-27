@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AppleGalleryCardView: View {
     
+    var appleItem: AppleItem
+    
     // MARK: - Body
     var body: some View {
         mainVStack
@@ -29,7 +31,7 @@ struct AppleGalleryCardView: View {
     
     private var infoVStack: some View {
         VStack {
-            Text("")
+            Text(appleItem.user)
                 .foregroundColor(Color.primary)
                 .font(.headline)
                 .padding(.top, 10)
@@ -42,8 +44,3 @@ struct AppleGalleryCardView: View {
     }
 }
 
-
-
-#Preview {
-    AppleGalleryCardView()
-}
