@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RegistrationView: View {
     
+    // MARK: - Properties
     @StateObject var viewModel: RegistrationViewModel
     @Environment(\.dismiss) var dismiss
     
@@ -38,6 +39,7 @@ struct RegistrationView: View {
         }
     }
     
+    // MARK: - View Components
     private var signUpImage: some View {
         Image("registration")
             .resizable()
@@ -117,7 +119,7 @@ struct RegistrationView: View {
                     try await MockAPI.shared.register(email: viewModel.email, password: viewModel.password, age: viewModel.age)
                     viewModel.showAlert = true
                 } catch {
-                    // error
+                    print("An error occurred: \(error)")
                 }
             }
         }
