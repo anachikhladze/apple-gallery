@@ -8,15 +8,15 @@
 import SwiftUI
 import NetworkManager
 
-protocol GalleryViewModelDelegate: AnyObject {
+protocol AppleGalleryViewModelDelegate: AnyObject {
     func didFetchData()
 }
 
-final class GalleryViewModel: ObservableObject {
+final class AppleGalleryViewModel: ObservableObject {
     
     // MARK: - Properties
     let networkManager: APIServices
-    weak var delegate: GalleryViewModelDelegate?
+    weak var delegate: AppleGalleryViewModelDelegate?
     
     var results: [AppleItem] = []
     
@@ -41,4 +41,8 @@ final class GalleryViewModel: ObservableObject {
             print(error)
         }
     }
+}
+
+struct Constants {
+    static let apiKey = "42579446-bbc2e8726461b1faa8a164b23"
 }

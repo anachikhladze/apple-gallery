@@ -9,8 +9,10 @@ import UIKit
 
 final class InfoStackViewComponent: UIStackView {
     
+    // MARK: - Properties
     private let gradientLayer = CAGradientLayer()
     
+    // MARK: - Init
     init(title: String, items: [UILabel], symbolName: String) {
         super.init(frame: .zero)
         
@@ -39,6 +41,7 @@ final class InfoStackViewComponent: UIStackView {
         gradientLayer.frame = bounds
     }
     
+    // MARK: - Setup
     private func setup(title: String, items: [UILabel], symbolName: String) {
         let titleLabel = UILabel()
         let config = UIImage.SymbolConfiguration(paletteColors: [UIColor.font])

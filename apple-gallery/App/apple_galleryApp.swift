@@ -6,13 +6,12 @@
 //
 
 import SwiftUI
-import NetworkManager
 
 @main
 struct apple_galleryApp: App {
     var body: some Scene {
         WindowGroup {
-            AppleGallerySwiftUIView()
+            LoginView(viewModel: LoginViewModel())
         }
     }
 }

@@ -6,12 +6,11 @@
 //
 
 import UIKit
-import NetworkManager
 
 final class AppleGalleryViewController: UIViewController {
     
     // MARK: - Properties
-    private let viewModel: GalleryViewModel
+    private let viewModel: AppleGalleryViewModel
     
     private let tableView: UITableView = {
         let tableView = UITableView()
@@ -31,7 +30,7 @@ final class AppleGalleryViewController: UIViewController {
         setViewModelDelegate()
     }
     
-    init(viewModel: GalleryViewModel) {
+    init(viewModel: AppleGalleryViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -99,7 +98,7 @@ extension AppleGalleryViewController: UITableViewDelegate {
 }
 
 // MARK: - GalleryViewModelDelegate
-extension AppleGalleryViewController: GalleryViewModelDelegate {
+extension AppleGalleryViewController: AppleGalleryViewModelDelegate {
     func didFetchData() {
         DispatchQueue.main.async {
             self.tableView.reloadData()

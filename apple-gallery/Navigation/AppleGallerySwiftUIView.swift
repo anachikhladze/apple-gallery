@@ -12,7 +12,7 @@ struct AppleGallerySwiftUIView: UIViewControllerRepresentable {
     typealias UIViewControllerType = UINavigationController
 
     func makeUIViewController(context: Context) -> UINavigationController {
-        let galleryViewController = AppleGalleryViewController(viewModel: GalleryViewModel(networkManager: NetworkManager()))
+        let galleryViewController = AppleGalleryViewController(viewModel: AppleGalleryViewModel(networkManager: NetworkManager()))
         let navigationController = UINavigationController(rootViewController: galleryViewController)
         return navigationController
     }
