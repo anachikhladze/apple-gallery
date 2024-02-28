@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class AppleItemTableViewCell: UITableViewCell {
     
@@ -70,7 +71,23 @@ final class AppleItemTableViewCell: UITableViewCell {
     
     // MARK: - Configure
     func configure(with item: AppleItem) {
-        usernameLabel.text = item.user
+        
+        let url = URL(string: item.largeImageURL)
+        appleImageView.kf.setImage(with: url)
+        
+        let usernameIcon = NSTextAttachment()
+        usernameIcon.image = UIImage(systemName: "person")?.withTintColor(.black, renderingMode: .automatic)
+        let usernameIconString = NSAttributedString(attachment: usernameIcon)
+        let usernameText = NSMutableAttributedString(string: "Username: \(item.user)")
+        usernameText.insert(usernameIconString, at: 0)
+        usernameLabel.attributedText = usernameText
+        
+        let likesIcon = NSTextAttachment()
+        likesIcon.image = UIImage(systemName: "heart")?.withTintColor(.black, renderingMode: .automatic)
+        let likesString = NSAttributedString(attachment: likesIcon)
+        let likesText = NSMutableAttributedString(string: "Likes:  \(item.likes)")
+        likesText.insert(likesString, at: 0)
+        likesCountLabel.attributedText = likesText
     }
 
     // MARK: - Private Methods
@@ -91,8 +108,8 @@ final class AppleItemTableViewCell: UITableViewCell {
             mainStackView.rightAnchor.constraint(equalTo: self.rightAnchor),
             mainStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
-            appleImageView.widthAnchor.constraint(equalToConstant: 70),
-            appleImageView.heightAnchor.constraint(equalToConstant: 80),
+            appleImageView.widthAnchor.constraint(equalToConstant: 90),
+            appleImageView.heightAnchor.constraint(equalToConstant: 90),
         ])
     }
 }

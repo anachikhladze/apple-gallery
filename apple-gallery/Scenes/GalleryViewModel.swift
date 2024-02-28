@@ -10,6 +10,7 @@ import NetworkManager
 
 protocol GalleryViewModelDelegate: AnyObject {
     func didFetchData()
+    func didFetchImage(_ image: UIImage)
 }
 
 final class GalleryViewModel: ObservableObject {
@@ -35,6 +36,17 @@ final class GalleryViewModel: ObservableObject {
             await MainActor.run {
                 results = appleGalleryResponse.hits
                 delegate?.didFetchData()
+            }
+        } catch {
+            print(error)
+        }
+    }
+    
+    private func downloadImage(from url: String) async {
+        do {
+            let image = try await networkManager.fetchImage(fromURL: url)
+            await MainActor.run {
+                delegate?.didFetchImage(image)
             }
         } catch {
             print(error)
