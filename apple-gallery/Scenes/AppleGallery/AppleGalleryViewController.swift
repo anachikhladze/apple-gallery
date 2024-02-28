@@ -10,9 +10,9 @@ import NetworkManager
 
 final class AppleGalleryViewController: UIViewController {
     
+    // MARK: - Properties
     private let viewModel: GalleryViewModel
     
-    // MARK: - Properties
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -24,13 +24,11 @@ final class AppleGalleryViewController: UIViewController {
         super.viewDidLoad()
         
         setupBackground()
+        setupNavigationBar()
         setupSubviews()
         setupConstraints()
         setupTableView()
-        
-        viewModel.delegate = self
-        
-        title = "Apple Gallery"
+        setViewModelDelegate()
     }
     
     init(viewModel: GalleryViewModel) {
@@ -45,6 +43,10 @@ final class AppleGalleryViewController: UIViewController {
     // MARK: - Private Methods
     private func setupBackground() {
         view.backgroundColor = .systemBackground
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.title = "Apple Gallery"
     }
     
     private func setupSubviews() {
@@ -64,6 +66,10 @@ final class AppleGalleryViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(AppleItemTableViewCell.self, forCellReuseIdentifier: "itemCell")
+    }
+    
+    private func setViewModelDelegate() {
+        viewModel.delegate = self
     }
 }
 
@@ -86,12 +92,13 @@ extension AppleGalleryViewController: UITableViewDataSource {
 // MARK: - TableVIew Delegate
 extension AppleGalleryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       let appleDetailsViewController = AppleDetailsViewController()
+        let appleDetailsViewController = AppleDetailsViewController()
         appleDetailsViewController.configure(with: viewModel.results[indexPath.row])
         navigationController?.pushViewController(appleDetailsViewController, animated: true)
     }
 }
 
+// MARK: - GalleryViewModelDelegate
 extension AppleGalleryViewController: GalleryViewModelDelegate {
     func didFetchData() {
         DispatchQueue.main.async {
