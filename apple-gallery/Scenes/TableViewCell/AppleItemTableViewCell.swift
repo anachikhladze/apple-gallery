@@ -69,9 +69,8 @@ final class AppleItemTableViewCell: UITableViewCell {
     }
     
     // MARK: - Configure
-    func configure() {
-        usernameLabel.text = "annasumire"
-        likesCountLabel.text = "Likes: 18 "
+    func configure(with item: AppleItem) {
+        usernameLabel.text = item.user
     }
 
     // MARK: - Private Methods

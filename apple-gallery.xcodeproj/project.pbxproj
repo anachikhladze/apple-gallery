@@ -30,6 +30,8 @@
 		A18FF31C2B8E41E6001A38D4 /* Color+Ext..swift in Sources */ = {isa = PBXBuildFile; fileRef = A18FF31B2B8E41E6001A38D4 /* Color+Ext..swift */; };
 		A1AC49522B8F49AC0068031A /* AppleGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC49512B8F49AC0068031A /* AppleGalleryViewController.swift */; };
 		A1AC49542B8F49FA0068031A /* AppleItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC49532B8F49FA0068031A /* AppleItemTableViewCell.swift */; };
+		A1AC49572B8F5D1D0068031A /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC49562B8F5D1D0068031A /* GalleryViewModel.swift */; };
+		A1AC49592B8F5F3E0068031A /* AppleGallerySwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC49582B8F5F3E0068031A /* AppleGallerySwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		A18FF31B2B8E41E6001A38D4 /* Color+Ext..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext..swift"; sourceTree = "<group>"; };
 		A1AC49512B8F49AC0068031A /* AppleGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGalleryViewController.swift; sourceTree = "<group>"; };
 		A1AC49532B8F49FA0068031A /* AppleItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleItemTableViewCell.swift; sourceTree = "<group>"; };
+		A1AC49562B8F5D1D0068031A /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		A1AC49582B8F5F3E0068031A /* AppleGallerySwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGallerySwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +218,8 @@
 			children = (
 				A1AC49552B8F4A130068031A /* TableViewCell */,
 				A1AC49512B8F49AC0068031A /* AppleGalleryViewController.swift */,
+				A1AC49582B8F5F3E0068031A /* AppleGallerySwiftUIView.swift */,
+				A1AC49562B8F5D1D0068031A /* GalleryViewModel.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -316,12 +322,14 @@
 				A18FF2AE2B8DD4D0001A38D4 /* AppleDetailsView.swift in Sources */,
 				A18FF3162B8E3A4C001A38D4 /* User.swift in Sources */,
 				A18FF29E2B8DCEAB001A38D4 /* AppleGalleryView.swift in Sources */,
+				A1AC49592B8F5F3E0068031A /* AppleGallerySwiftUIView.swift in Sources */,
 				A18FF2BF2B8DEA1F001A38D4 /* RegistrationViewModel.swift in Sources */,
 				A18FF31C2B8E41E6001A38D4 /* Color+Ext..swift in Sources */,
 				A18FF3142B8E3A01001A38D4 /* MockAPI.swift in Sources */,
 				A1AC49542B8F49FA0068031A /* AppleItemTableViewCell.swift in Sources */,
 				A18FF2BB2B8DE728001A38D4 /* InputView.swift in Sources */,
 				A18FF28E2B8DCC62001A38D4 /* apple_galleryApp.swift in Sources */,
+				A1AC49572B8F5D1D0068031A /* GalleryViewModel.swift in Sources */,
 				A18FF2B72B8DE6D9001A38D4 /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

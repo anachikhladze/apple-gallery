@@ -12,7 +12,7 @@ import NetworkManager
 struct apple_galleryApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginView(viewModel: LoginViewModel())
+            AppleGallerySwiftUIView()
         }
     }
 }

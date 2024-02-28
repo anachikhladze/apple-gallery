@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import NetworkManager
 
 final class AppleGalleryViewController: UIViewController {
+    
+    private let viewModel: GalleryViewModel
     
     // MARK: - Properties
     private let tableView: UITableView = {
@@ -23,6 +26,18 @@ final class AppleGalleryViewController: UIViewController {
         setupBackground()
         setupSubviews()
         setupConstraints()
+        setupTableView()
+        
+        viewModel.delegate = self
+    }
+    
+    init(viewModel: GalleryViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Private Methods
@@ -46,17 +61,22 @@ final class AppleGalleryViewController: UIViewController {
     private func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(AppleItemTableViewCell.self, forCellReuseIdentifier: "appleItemCell")
+        tableView.register(AppleItemTableViewCell.self, forCellReuseIdentifier: "itemCell")
     }
 }
 
 // MARK: - TableVIew DataSource
 extension AppleGalleryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        viewModel.results.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = viewModel.results[indexPath.row]
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell") as? AppleItemTableViewCell {
+            cell.configure(with: item)
+            return cell
+        }
         return UITableViewCell()
     }
 }
@@ -64,6 +84,14 @@ extension AppleGalleryViewController: UITableViewDataSource {
 // MARK: - TableVIew Delegate
 extension AppleGalleryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      // details page
+        // details page
+    }
+}
+
+extension AppleGalleryViewController: GalleryViewModelDelegate {
+    func didFetchData() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }
