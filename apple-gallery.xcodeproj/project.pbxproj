@@ -32,6 +32,7 @@
 		A1AC49542B8F49FA0068031A /* AppleItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC49532B8F49FA0068031A /* AppleItemTableViewCell.swift */; };
 		A1AC49572B8F5D1D0068031A /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC49562B8F5D1D0068031A /* GalleryViewModel.swift */; };
 		A1AC49592B8F5F3E0068031A /* AppleGallerySwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC49582B8F5F3E0068031A /* AppleGallerySwiftUIView.swift */; };
+		A1AC495B2B8F7EA60068031A /* UIFont + CustomRoundedFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC495A2B8F7EA60068031A /* UIFont + CustomRoundedFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		A1AC49532B8F49FA0068031A /* AppleItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleItemTableViewCell.swift; sourceTree = "<group>"; };
 		A1AC49562B8F5D1D0068031A /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		A1AC49582B8F5F3E0068031A /* AppleGallerySwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGallerySwiftUIView.swift; sourceTree = "<group>"; };
+		A1AC495A2B8F7EA60068031A /* UIFont + CustomRoundedFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + CustomRoundedFont.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				A18FF31B2B8E41E6001A38D4 /* Color+Ext..swift */,
+				A1AC495A2B8F7EA60068031A /* UIFont + CustomRoundedFont.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				A18FF2AE2B8DD4D0001A38D4 /* AppleDetailsView.swift in Sources */,
 				A18FF3162B8E3A4C001A38D4 /* User.swift in Sources */,
 				A18FF29E2B8DCEAB001A38D4 /* AppleGalleryView.swift in Sources */,
+				A1AC495B2B8F7EA60068031A /* UIFont + CustomRoundedFont.swift in Sources */,
 				A1AC49592B8F5F3E0068031A /* AppleGallerySwiftUIView.swift in Sources */,
 				A18FF2BF2B8DEA1F001A38D4 /* RegistrationViewModel.swift in Sources */,
 				A18FF31C2B8E41E6001A38D4 /* Color+Ext..swift in Sources */,

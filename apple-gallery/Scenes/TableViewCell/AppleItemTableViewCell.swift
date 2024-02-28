@@ -23,7 +23,10 @@ final class AppleItemTableViewCell: UITableViewCell {
     private let infoStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 4
+        stackView.spacing = 2
+        stackView.isLayoutMarginsRelativeArrangement = true
+        stackView.layoutMargins = .init(top: 8, left: 16, bottom: 8, right: 16)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     
@@ -35,14 +38,14 @@ final class AppleItemTableViewCell: UITableViewCell {
     
     private let usernameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Helvetica-Bold", size: 18)
+        label.font = UIFont.customRoundedFont(size: 20, weight: .semibold)
         label.textColor = .black
         return label
     }()
     
     private let likesCountLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Helvetica-Bold", size: 18)
+        label.font = UIFont.customRoundedFont(size: 18, weight: .semibold)
         label.textColor = .black
         return label
     }()
@@ -85,7 +88,7 @@ final class AppleItemTableViewCell: UITableViewCell {
         let likesIcon = NSTextAttachment()
         likesIcon.image = UIImage(systemName: "heart")?.withTintColor(.black, renderingMode: .automatic)
         let likesString = NSAttributedString(attachment: likesIcon)
-        let likesText = NSMutableAttributedString(string: "Likes:  \(item.likes)")
+        let likesText = NSMutableAttributedString(string: " Likes: \(item.likes)")
         likesText.insert(likesString, at: 0)
         likesCountLabel.attributedText = likesText
     }
@@ -110,6 +113,11 @@ final class AppleItemTableViewCell: UITableViewCell {
             
             appleImageView.widthAnchor.constraint(equalToConstant: 90),
             appleImageView.heightAnchor.constraint(equalToConstant: 90),
+            
+            infoStackView.topAnchor.constraint(equalTo: mainStackView.topAnchor),
+            infoStackView.leftAnchor.constraint(equalTo: appleImageView.rightAnchor),
+            infoStackView.rightAnchor.constraint(equalTo: mainStackView.rightAnchor),
+            infoStackView.bottomAnchor.constraint(equalTo: mainStackView.bottomAnchor)
         ])
     }
 }
