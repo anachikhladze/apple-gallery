@@ -9,13 +9,15 @@ import SwiftUI
 import NetworkManager
 
 struct AppleGallerySwiftUIView: UIViewControllerRepresentable {
-    typealias UIViewControllerType = AppleDetailsViewController
-    
-    func makeUIViewController(context: Context) -> AppleDetailsViewController {
-        return AppleDetailsViewController()
+    typealias UIViewControllerType = UINavigationController
+
+    func makeUIViewController(context: Context) -> UINavigationController {
+        let galleryViewController = AppleGalleryViewController(viewModel: GalleryViewModel(networkManager: NetworkManager()))
+        let navigationController = UINavigationController(rootViewController: galleryViewController)
+        return navigationController
     }
-    
-    func updateUIViewController(_ uiViewController: AppleDetailsViewController, context: Context) {
+
+    func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {
         // ...
     }
 }

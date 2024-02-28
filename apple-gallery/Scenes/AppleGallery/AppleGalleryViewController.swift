@@ -86,7 +86,9 @@ extension AppleGalleryViewController: UITableViewDataSource {
 // MARK: - TableVIew Delegate
 extension AppleGalleryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // details page
+       let appleDetailsViewController = AppleDetailsViewController()
+        appleDetailsViewController.configure(with: viewModel.results[indexPath.row])
+        navigationController?.pushViewController(appleDetailsViewController, animated: true)
     }
 }
 
