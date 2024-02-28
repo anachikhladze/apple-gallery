@@ -1,18 +1,24 @@
 //
-//  AppleGalleryViewModel.swift
+//  AppleGalleryViewModel1.swift
 //  apple-gallery
 //
-//  Created by Anna Sumire on 27.02.24.
+//  Created by Anna Sumire on 28.02.24.
 //
 
 import SwiftUI
 import NetworkManager
 
+protocol AppleGalleryViewModelDelegate: AnyObject {
+    func didFetchData()
+}
+
 final class AppleGalleryViewModel: ObservableObject {
     
     // MARK: - Properties
     let networkManager: APIServices
-    @Published var results: [AppleItem] = []
+    weak var delegate: AppleGalleryViewModelDelegate?
+    
+    var results: [AppleItem] = []
     
     // MARK: - Initialization
     init(networkManager: APIServices) {
@@ -29,6 +35,7 @@ final class AppleGalleryViewModel: ObservableObject {
             let appleGalleryResponse: AppleGalleryResponse = try await networkManager.fetchData(fromURL: urlString)
             await MainActor.run {
                 results = appleGalleryResponse.hits
+                delegate?.didFetchData()
             }
         } catch {
             print(error)

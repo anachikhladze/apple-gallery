@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import NetworkManager
 
 struct LoginView: View {
     
@@ -22,7 +21,7 @@ struct LoginView: View {
             Spacer()
             registrationLink
         }
-        .navigate(when: $viewModel.isLoggedIn, to: AppleGalleryView(viewModel: AppleGalleryViewModel(networkManager: NetworkManager())))
+        .navigate(when: $viewModel.isLoggedIn, to: AppleGallerySwiftUIView())
     }
     
     // MARK: - View Components
