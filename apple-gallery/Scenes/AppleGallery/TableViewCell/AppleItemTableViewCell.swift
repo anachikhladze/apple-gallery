@@ -38,15 +38,15 @@ final class AppleItemTableViewCell: UITableViewCell {
     
     private let usernameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.customRoundedFont(size: 20, weight: .semibold)
-        label.textColor = .black
+        label.font = UIFont.customRoundedFont(size: 18, weight: .semibold)
+        label.textColor = UIColor.font
         return label
     }()
     
     private let likesCountLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.customRoundedFont(size: 18, weight: .semibold)
-        label.textColor = .black
+        label.textColor = UIColor.font
         return label
     }()
 
@@ -79,14 +79,14 @@ final class AppleItemTableViewCell: UITableViewCell {
         appleImageView.kf.setImage(with: url)
         
         let usernameIcon = NSTextAttachment()
-        usernameIcon.image = UIImage(systemName: "person")?.withTintColor(.black, renderingMode: .automatic)
+        usernameIcon.image = UIImage(systemName: "person")?.withTintColor(UIColor.font, renderingMode: .alwaysOriginal)
         let usernameIconString = NSAttributedString(attachment: usernameIcon)
-        let usernameText = NSMutableAttributedString(string: "Username: \(item.user)")
+        let usernameText = NSMutableAttributedString(string: " Username: \(item.user)")
         usernameText.insert(usernameIconString, at: 0)
         usernameLabel.attributedText = usernameText
         
         let likesIcon = NSTextAttachment()
-        likesIcon.image = UIImage(systemName: "heart")?.withTintColor(.black, renderingMode: .automatic)
+        likesIcon.image = UIImage(systemName: "heart")?.withTintColor(UIColor.font, renderingMode: .alwaysOriginal)
         let likesString = NSAttributedString(attachment: likesIcon)
         let likesText = NSMutableAttributedString(string: " Likes: \(item.likes)")
         likesText.insert(likesString, at: 0)
@@ -111,7 +111,7 @@ final class AppleItemTableViewCell: UITableViewCell {
             mainStackView.rightAnchor.constraint(equalTo: self.rightAnchor),
             mainStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
-            appleImageView.widthAnchor.constraint(equalToConstant: 90),
+            appleImageView.widthAnchor.constraint(equalToConstant: 100),
             appleImageView.heightAnchor.constraint(equalToConstant: 90),
             
             infoStackView.topAnchor.constraint(equalTo: mainStackView.topAnchor),

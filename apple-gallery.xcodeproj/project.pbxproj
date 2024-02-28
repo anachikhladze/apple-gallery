@@ -33,6 +33,8 @@
 		A1AC49572B8F5D1D0068031A /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC49562B8F5D1D0068031A /* GalleryViewModel.swift */; };
 		A1AC49592B8F5F3E0068031A /* AppleGallerySwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC49582B8F5F3E0068031A /* AppleGallerySwiftUIView.swift */; };
 		A1AC495B2B8F7EA60068031A /* UIFont + CustomRoundedFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC495A2B8F7EA60068031A /* UIFont + CustomRoundedFont.swift */; };
+		A1AC495F2B8F831E0068031A /* AppleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC495E2B8F831E0068031A /* AppleDetailsViewController.swift */; };
+		A1AC49612B8F89220068031A /* InfoStackViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC49602B8F89220068031A /* InfoStackViewComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		A1AC49562B8F5D1D0068031A /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		A1AC49582B8F5F3E0068031A /* AppleGallerySwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGallerySwiftUIView.swift; sourceTree = "<group>"; };
 		A1AC495A2B8F7EA60068031A /* UIFont + CustomRoundedFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + CustomRoundedFont.swift"; sourceTree = "<group>"; };
+		A1AC495E2B8F831E0068031A /* AppleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleDetailsViewController.swift; sourceTree = "<group>"; };
+		A1AC49602B8F89220068031A /* InfoStackViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoStackViewComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,7 @@
 				A18FF2B02B8DE465001A38D4 /* DetailView.swift */,
 				A18FF2BA2B8DE728001A38D4 /* InputView.swift */,
 				A18FF2BC2B8DE765001A38D4 /* CustomSignInButton.swift */,
+				A1AC49602B8F89220068031A /* InfoStackViewComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -219,10 +224,8 @@
 		A1AC49502B8F49640068031A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				A1AC49552B8F4A130068031A /* TableViewCell */,
-				A1AC49512B8F49AC0068031A /* AppleGalleryViewController.swift */,
-				A1AC49582B8F5F3E0068031A /* AppleGallerySwiftUIView.swift */,
-				A1AC49562B8F5D1D0068031A /* GalleryViewModel.swift */,
+				A1AC495D2B8F82EA0068031A /* AppleDetails */,
+				A1AC495C2B8F82C20068031A /* AppleGallery */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -233,6 +236,25 @@
 				A1AC49532B8F49FA0068031A /* AppleItemTableViewCell.swift */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		A1AC495C2B8F82C20068031A /* AppleGallery */ = {
+			isa = PBXGroup;
+			children = (
+				A1AC49552B8F4A130068031A /* TableViewCell */,
+				A1AC49512B8F49AC0068031A /* AppleGalleryViewController.swift */,
+				A1AC49562B8F5D1D0068031A /* GalleryViewModel.swift */,
+				A1AC49582B8F5F3E0068031A /* AppleGallerySwiftUIView.swift */,
+			);
+			path = AppleGallery;
+			sourceTree = "<group>";
+		};
+		A1AC495D2B8F82EA0068031A /* AppleDetails */ = {
+			isa = PBXGroup;
+			children = (
+				A1AC495E2B8F831E0068031A /* AppleDetailsViewController.swift */,
+			);
+			path = AppleDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +345,7 @@
 				A18FF2BD2B8DE765001A38D4 /* CustomSignInButton.swift in Sources */,
 				A1AC49522B8F49AC0068031A /* AppleGalleryViewController.swift in Sources */,
 				A18FF2AE2B8DD4D0001A38D4 /* AppleDetailsView.swift in Sources */,
+				A1AC49612B8F89220068031A /* InfoStackViewComponent.swift in Sources */,
 				A18FF3162B8E3A4C001A38D4 /* User.swift in Sources */,
 				A18FF29E2B8DCEAB001A38D4 /* AppleGalleryView.swift in Sources */,
 				A1AC495B2B8F7EA60068031A /* UIFont + CustomRoundedFont.swift in Sources */,
@@ -334,6 +357,7 @@
 				A18FF2BB2B8DE728001A38D4 /* InputView.swift in Sources */,
 				A18FF28E2B8DCC62001A38D4 /* apple_galleryApp.swift in Sources */,
 				A1AC49572B8F5D1D0068031A /* GalleryViewModel.swift in Sources */,
+				A1AC495F2B8F831E0068031A /* AppleDetailsViewController.swift in Sources */,
 				A18FF2B72B8DE6D9001A38D4 /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

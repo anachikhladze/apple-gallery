@@ -29,6 +29,8 @@ final class AppleGalleryViewController: UIViewController {
         setupTableView()
         
         viewModel.delegate = self
+        
+        title = "Apple Gallery"
     }
     
     init(viewModel: GalleryViewModel) {
