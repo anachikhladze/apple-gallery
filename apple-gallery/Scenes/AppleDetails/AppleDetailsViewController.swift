@@ -18,7 +18,6 @@ final class AppleDetailsViewController: UIViewController {
     private let appleImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "login")
         return imageView
     }()
     
@@ -45,7 +44,7 @@ final class AppleDetailsViewController: UIViewController {
         label.numberOfLines = 0
         label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont.customRoundedFont(size: 20, weight: .light)
+        label.font = UIFont.customRoundedFont(size: 24, weight: .light)
         return label
     }()
     
@@ -54,7 +53,7 @@ final class AppleDetailsViewController: UIViewController {
         label.numberOfLines = 0
         label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont.customRoundedFont(size: 20, weight: .light)
+        label.font = UIFont.customRoundedFont(size: 24, weight: .light)
         return label
     }()
     
@@ -63,7 +62,7 @@ final class AppleDetailsViewController: UIViewController {
         label.numberOfLines = 0
         label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont.customRoundedFont(size: 20, weight: .light)
+        label.font = UIFont.customRoundedFont(size: 24, weight: .light)
         label.text = "Image Type: Photo"
         return label
     }()
@@ -73,7 +72,7 @@ final class AppleDetailsViewController: UIViewController {
         label.numberOfLines = 0
         label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont.customRoundedFont(size: 20, weight: .light)
+        label.font = UIFont.customRoundedFont(size: 24, weight: .light)
         label.text = "Tags: Macbook, iPhone, AirPods"
         return label
     }()
@@ -83,7 +82,7 @@ final class AppleDetailsViewController: UIViewController {
         label.numberOfLines = 0
         label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont.customRoundedFont(size: 20, weight: .light)
+        label.font = UIFont.customRoundedFont(size: 24, weight: .light)
         label.text = "Test Size: 169"
         return label
     }()
@@ -93,7 +92,7 @@ final class AppleDetailsViewController: UIViewController {
         label.numberOfLines = 0
         label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont.customRoundedFont(size: 20, weight: .light)
+        label.font = UIFont.customRoundedFont(size: 24, weight: .light)
         label.text = "Image Type: Photo"
         return label
     }()
@@ -103,7 +102,7 @@ final class AppleDetailsViewController: UIViewController {
         label.numberOfLines = 0
         label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont.customRoundedFont(size: 20, weight: .light)
+        label.font = UIFont.customRoundedFont(size: 24, weight: .light)
         label.text = "Tags: Macbook, iPhone, AirPods"
         return label
     }()
@@ -113,7 +112,7 @@ final class AppleDetailsViewController: UIViewController {
         label.numberOfLines = 0
         label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont.customRoundedFont(size: 20, weight: .light)
+        label.font = UIFont.customRoundedFont(size: 24, weight: .light)
         label.text = "Test Size: 169"
         return label
     }()
@@ -123,7 +122,7 @@ final class AppleDetailsViewController: UIViewController {
         label.numberOfLines = 0
         label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont.customRoundedFont(size: 20, weight: .light)
+        label.font = UIFont.customRoundedFont(size: 24, weight: .light)
         label.text = "Image Type: Photo"
         return label
     }()
@@ -133,7 +132,7 @@ final class AppleDetailsViewController: UIViewController {
         label.numberOfLines = 0
         label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont.customRoundedFont(size: 20, weight: .light)
+        label.font = UIFont.customRoundedFont(size: 24, weight: .light)
         label.text = "Tags: Macbook, iPhone, AirPods"
         return label
     }()
@@ -147,6 +146,9 @@ final class AppleDetailsViewController: UIViewController {
     
     // MARK: - Configure
     func configure(with item: AppleItem) {
+        let url = URL(string: item.largeImageURL)
+        appleImageView.kf.setImage(with: url)
+        
         imageSizeLabel.text = "Size: \(item.imageSize)"
         imageTypeLabel.text = "Image type \(item.type)"
         imageTagsLabel.text = "Image tags: \(item.tags)"
@@ -190,9 +192,9 @@ final class AppleDetailsViewController: UIViewController {
     }
     
     private func setupInfoStackViews() {
-        let imageInfo = InfoStackViewComponent(title: "Image Details", items: [imageSizeLabel, imageTypeLabel, imageTagsLabel], symbolName: "person")
+        let imageInfo = InfoStackViewComponent(title: "Image Details:", items: [imageSizeLabel, imageTypeLabel, imageTagsLabel], symbolName: "photo.on.rectangle")
         
-        let moreDetails = InfoStackViewComponent(title: "Image Details", items: [usernameLabel, viewsLabel, likesLabel, commentsLabel, favoritesLabel, downloadsLabel], symbolName: "person")
+        let moreDetails = InfoStackViewComponent(title: "Activity:", items: [usernameLabel, viewsLabel, likesLabel, commentsLabel, favoritesLabel, downloadsLabel], symbolName: "eye")
         
         infoStackView.addArrangedSubview(imageInfo)
         infoStackView.addArrangedSubview(moreDetails)
@@ -211,7 +213,7 @@ final class AppleDetailsViewController: UIViewController {
             scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             
-            appleImageView.heightAnchor.constraint(equalToConstant: 170),
+            appleImageView.heightAnchor.constraint(equalToConstant: 200),
             appleImageView.widthAnchor.constraint(equalToConstant: 150),
             mainStackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             mainStackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),

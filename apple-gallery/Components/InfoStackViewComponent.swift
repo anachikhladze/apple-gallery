@@ -20,7 +20,7 @@ final class InfoStackViewComponent: UIStackView {
         layoutMargins = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
         layer.cornerRadius = 8
         
-        gradientLayer.colors = [UIColor.purple.cgColor, UIColor.blue.cgColor]
+        gradientLayer.colors = [UIColor.gray.cgColor, UIColor.accentColor.cgColor]
         gradientLayer.startPoint = CGPoint(x: 1, y: 0)
         gradientLayer.endPoint = CGPoint(x: 0, y: 1)
         gradientLayer.opacity = 0.7
@@ -42,7 +42,7 @@ final class InfoStackViewComponent: UIStackView {
     private func setup(title: String, items: [UILabel], symbolName: String) {
         let titleLabel = UILabel()
         let config = UIImage.SymbolConfiguration(paletteColors: [UIColor.font])
-        let symbolConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .medium).applying(config)
+        let symbolConfig = UIImage.SymbolConfiguration(pointSize: 22, weight: .medium).applying(config)
         let image = UIImage(systemName: symbolName, withConfiguration: symbolConfig)
         let attachment = NSTextAttachment()
         attachment.image = image
@@ -50,7 +50,7 @@ final class InfoStackViewComponent: UIStackView {
         attributedString.append(NSAttributedString(string: " \(title)"))
         titleLabel.attributedText = attributedString
         titleLabel.textColor = UIColor.font
-        titleLabel.font = UIFont.customRoundedFont(size: 18, weight: .medium)
+        titleLabel.font = UIFont.customRoundedFont(size: 22, weight: .medium)
         titleLabel.textAlignment = .left
         addArrangedSubview(titleLabel)
         
@@ -60,7 +60,7 @@ final class InfoStackViewComponent: UIStackView {
             itemLabel.numberOfLines = 0
             itemLabel.textColor = UIColor.font
             itemLabel.textAlignment = .left
-            itemLabel.font = UIFont.customRoundedFont(size: 16, weight: .light)
+            itemLabel.font = UIFont.customRoundedFont(size: 20, weight: .light)
             addArrangedSubview(itemLabel)
         }
     }

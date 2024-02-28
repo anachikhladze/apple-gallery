@@ -35,6 +35,7 @@
 		A1AC495B2B8F7EA60068031A /* UIFont + CustomRoundedFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC495A2B8F7EA60068031A /* UIFont + CustomRoundedFont.swift */; };
 		A1AC495F2B8F831E0068031A /* AppleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC495E2B8F831E0068031A /* AppleDetailsViewController.swift */; };
 		A1AC49612B8F89220068031A /* InfoStackViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC49602B8F89220068031A /* InfoStackViewComponent.swift */; };
+		A1AC49632B8F9A130068031A /* UIColor+Ext..swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC49622B8F9A130068031A /* UIColor+Ext..swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		A1AC495A2B8F7EA60068031A /* UIFont + CustomRoundedFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + CustomRoundedFont.swift"; sourceTree = "<group>"; };
 		A1AC495E2B8F831E0068031A /* AppleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleDetailsViewController.swift; sourceTree = "<group>"; };
 		A1AC49602B8F89220068031A /* InfoStackViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoStackViewComponent.swift; sourceTree = "<group>"; };
+		A1AC49622B8F9A130068031A /* UIColor+Ext..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext..swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				A18FF31B2B8E41E6001A38D4 /* Color+Ext..swift */,
+				A1AC49622B8F9A130068031A /* UIColor+Ext..swift */,
 				A1AC495A2B8F7EA60068031A /* UIFont + CustomRoundedFont.swift */,
 			);
 			path = Extensions;
@@ -338,6 +341,7 @@
 				A18FF2A22B8DD0A4001A38D4 /* AppleGalleryViewModel.swift in Sources */,
 				A18FF2B12B8DE465001A38D4 /* DetailView.swift in Sources */,
 				A18FF29C2B8DCDAC001A38D4 /* AppleGalleryCardView.swift in Sources */,
+				A1AC49632B8F9A130068031A /* UIColor+Ext..swift in Sources */,
 				A18FF2B42B8DE697001A38D4 /* LoginView.swift in Sources */,
 				A18FF2A02B8DCF74001A38D4 /* AppleItem.swift in Sources */,
 				A18FF2C12B8DEB3E001A38D4 /* LoginViewModel.swift in Sources */,
