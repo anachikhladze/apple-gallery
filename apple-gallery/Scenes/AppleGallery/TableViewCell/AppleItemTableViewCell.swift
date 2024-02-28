@@ -49,7 +49,7 @@ final class AppleItemTableViewCell: UITableViewCell {
         label.textColor = UIColor.font
         return label
     }()
-
+    
     // MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -58,7 +58,7 @@ final class AppleItemTableViewCell: UITableViewCell {
         addSubviews()
         setupConstraints()
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -74,10 +74,12 @@ final class AppleItemTableViewCell: UITableViewCell {
     
     // MARK: - Configure
     func configure(with item: AppleItem) {
-        
         let url = URL(string: item.largeImageURL)
         appleImageView.kf.setImage(with: url)
-        
+        configureIcons(with: item)
+    }
+    
+    private func configureIcons(with item: AppleItem) {
         let usernameIcon = NSTextAttachment()
         usernameIcon.image = UIImage(systemName: "person")?.withTintColor(UIColor.font, renderingMode: .alwaysOriginal)
         let usernameIconString = NSAttributedString(attachment: usernameIcon)
@@ -92,7 +94,7 @@ final class AppleItemTableViewCell: UITableViewCell {
         likesText.insert(likesString, at: 0)
         likesCountLabel.attributedText = likesText
     }
-
+    
     // MARK: - Private Methods
     private func addSubviews() {
         addSubview(mainStackView)

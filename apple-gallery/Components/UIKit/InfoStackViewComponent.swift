@@ -20,10 +20,10 @@ final class InfoStackViewComponent: UIStackView {
         layoutMargins = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
         layer.cornerRadius = 8
         
-        gradientLayer.colors = [UIColor.gray.cgColor, UIColor.accentColor.cgColor]
+        gradientLayer.colors = [UIColor.blue.cgColor, UIColor.accentColor.cgColor]
         gradientLayer.startPoint = CGPoint(x: 1, y: 0)
         gradientLayer.endPoint = CGPoint(x: 0, y: 1)
-        gradientLayer.opacity = 0.7
+        gradientLayer.opacity = 0.5
         gradientLayer.cornerRadius = 14
         layer.insertSublayer(gradientLayer, at: 0)
         

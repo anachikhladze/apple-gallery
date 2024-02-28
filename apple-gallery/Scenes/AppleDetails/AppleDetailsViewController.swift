@@ -137,7 +137,6 @@ final class AppleDetailsViewController: UIViewController {
         return label
     }()
     
-    
     // MARK: - ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()

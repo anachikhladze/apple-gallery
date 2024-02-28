@@ -172,10 +172,8 @@
 		A18FF2AF2B8DE43F001A38D4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A18FF2B02B8DE465001A38D4 /* DetailView.swift */,
-				A18FF2BA2B8DE728001A38D4 /* InputView.swift */,
-				A18FF2BC2B8DE765001A38D4 /* CustomSignInButton.swift */,
-				A1AC49602B8F89220068031A /* InfoStackViewComponent.swift */,
+				A1AC49642B8F9C120068031A /* SwiftUI */,
+				A1AC49652B8F9C2C0068031A /* UIKit */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -210,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				A18FF3182B8E3CED001A38D4 /* ConditionalNavigationModifier.swift */,
+				A1AC49582B8F5F3E0068031A /* AppleGallerySwiftUIView.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -247,7 +246,6 @@
 				A1AC49552B8F4A130068031A /* TableViewCell */,
 				A1AC49512B8F49AC0068031A /* AppleGalleryViewController.swift */,
 				A1AC49562B8F5D1D0068031A /* GalleryViewModel.swift */,
-				A1AC49582B8F5F3E0068031A /* AppleGallerySwiftUIView.swift */,
 			);
 			path = AppleGallery;
 			sourceTree = "<group>";
@@ -258,6 +256,24 @@
 				A1AC495E2B8F831E0068031A /* AppleDetailsViewController.swift */,
 			);
 			path = AppleDetails;
+			sourceTree = "<group>";
+		};
+		A1AC49642B8F9C120068031A /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				A18FF2BA2B8DE728001A38D4 /* InputView.swift */,
+				A18FF2B02B8DE465001A38D4 /* DetailView.swift */,
+				A18FF2BC2B8DE765001A38D4 /* CustomSignInButton.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		A1AC49652B8F9C2C0068031A /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				A1AC49602B8F89220068031A /* InfoStackViewComponent.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

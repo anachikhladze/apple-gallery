@@ -93,10 +93,6 @@ extension AppleGalleryViewController: UITableViewDelegate {
 }
 
 extension AppleGalleryViewController: GalleryViewModelDelegate {
-    func didFetchImage(_ image: UIImage) {
-        
-    }
-    
     func didFetchData() {
         DispatchQueue.main.async {
             self.tableView.reloadData()

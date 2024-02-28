@@ -18,6 +18,6 @@ struct AppleGallerySwiftUIView: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {
-        // ...
+        
     }
 }
