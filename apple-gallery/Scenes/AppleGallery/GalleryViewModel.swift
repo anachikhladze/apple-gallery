@@ -17,7 +17,8 @@ final class GalleryViewModel: ObservableObject {
     // MARK: - Properties
     let networkManager: APIServices
     weak var delegate: GalleryViewModelDelegate?
-    @Published var results: [AppleItem] = []
+    
+    var results: [AppleItem] = []
     
     // MARK: - Initialization
     init(networkManager: APIServices) {

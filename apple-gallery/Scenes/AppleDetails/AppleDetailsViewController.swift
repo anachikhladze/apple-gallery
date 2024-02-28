@@ -9,6 +9,7 @@ import UIKit
 
 final class AppleDetailsViewController: UIViewController {
     
+    // MARK: - Properties
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -39,101 +40,66 @@ final class AppleDetailsViewController: UIViewController {
         return stackView
     }()
     
-    private let imageDetailsLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.textColor = .black
-        label.textAlignment = .left
-        label.font = UIFont.customRoundedFont(size: 24, weight: .light)
-        return label
-    }()
-    
     private let imageSizeLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont.customRoundedFont(size: 24, weight: .light)
         return label
     }()
     
     private let imageTypeLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont.customRoundedFont(size: 24, weight: .light)
-        label.text = "Image Type: Photo"
         return label
     }()
     
     private let imageTagsLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont.customRoundedFont(size: 24, weight: .light)
-        label.text = "Tags: Macbook, iPhone, AirPods"
         return label
     }()
     
     private let usernameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont.customRoundedFont(size: 24, weight: .light)
-        label.text = "Test Size: 169"
         return label
     }()
     
     private let viewsLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont.customRoundedFont(size: 24, weight: .light)
-        label.text = "Image Type: Photo"
         return label
     }()
     
     private let likesLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont.customRoundedFont(size: 24, weight: .light)
-        label.text = "Tags: Macbook, iPhone, AirPods"
         return label
     }()
     
     private let commentsLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont.customRoundedFont(size: 24, weight: .light)
-        label.text = "Test Size: 169"
         return label
     }()
     
     private let favoritesLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont.customRoundedFont(size: 24, weight: .light)
-        label.text = "Image Type: Photo"
         return label
     }()
     
     private let downloadsLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont.customRoundedFont(size: 24, weight: .light)
-        label.text = "Tags: Macbook, iPhone, AirPods"
         return label
     }()
     
@@ -172,9 +138,7 @@ final class AppleDetailsViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
-        navigationController?.navigationBar.isHidden = false
         navigationItem.title = "Details"
-        navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     private func addSubviews() {
@@ -193,11 +157,10 @@ final class AppleDetailsViewController: UIViewController {
     private func setupInfoStackViews() {
         let imageInfo = InfoStackViewComponent(title: "Image Details:", items: [imageSizeLabel, imageTypeLabel, imageTagsLabel], symbolName: "photo.on.rectangle")
         
-        let moreDetails = InfoStackViewComponent(title: "Activity:", items: [usernameLabel, viewsLabel, likesLabel, commentsLabel, favoritesLabel, downloadsLabel], symbolName: "eye")
+        let activityInfo = InfoStackViewComponent(title: "Activity:", items: [usernameLabel, viewsLabel, likesLabel, commentsLabel, favoritesLabel, downloadsLabel], symbolName: "eye")
         
         infoStackView.addArrangedSubview(imageInfo)
-        infoStackView.addArrangedSubview(moreDetails)
-        
+        infoStackView.addArrangedSubview(activityInfo)
     }
     
     private func setupConstraints() {
@@ -214,6 +177,7 @@ final class AppleDetailsViewController: UIViewController {
             
             appleImageView.heightAnchor.constraint(equalToConstant: 200),
             appleImageView.widthAnchor.constraint(equalToConstant: 150),
+            
             mainStackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             mainStackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             mainStackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),

@@ -73,7 +73,7 @@ final class AppleGalleryViewController: UIViewController {
     }
 }
 
-// MARK: - TableVIew DataSource
+// MARK: - TableView DataSource
 extension AppleGalleryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.results.count
@@ -89,7 +89,7 @@ extension AppleGalleryViewController: UITableViewDataSource {
     }
 }
 
-// MARK: - TableVIew Delegate
+// MARK: - TableView Delegate
 extension AppleGalleryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let appleDetailsViewController = AppleDetailsViewController()
