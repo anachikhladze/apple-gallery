@@ -42,4 +42,28 @@ final class AppleGalleryViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
         ])
     }
+    
+    private func setupTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(AppleItemTableViewCell.self, forCellReuseIdentifier: "appleItemCell")
+    }
+}
+
+// MARK: - TableVIew DataSource
+extension AppleGalleryViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+}
+
+// MARK: - TableVIew Delegate
+extension AppleGalleryViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      // details page
+    }
 }
